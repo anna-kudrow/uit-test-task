@@ -10,7 +10,7 @@ function Header() {
             key={item.path}
             to={item.path}
             className={({ isActive }) =>
-              `relative overflow-y-hidden pb-4 after:absolute after:bottom-0 after:left-0 after:h-2 after:w-0 after:translate-y-1/2 after:rounded-full after:bg-accent ${isActive ? "text-accent after:w-full" : "text-gray-400"}`
+              `relative overflow-y-hidden pb-4 after:absolute after:bottom-0 after:left-0 after:h-2 after:w-0 after:translate-y-1/2 after:rounded-full after:bg-primary ${isActive ? "text-primary after:w-full" : "text-gray-400"}`
             }
           >
             {item.text}
