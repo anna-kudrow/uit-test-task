@@ -1,13 +1,13 @@
-import type { NavItem } from "./types";
+import type { NavItem, Paths } from "./types";
 
-export const PATHS = {
+export const PATHS: Paths = {
   MAIN_SLIDE: "/main-slide",
   TASKS: "/tasks",
   RESULTS: "/results",
-  PARCELS: "/parcels",
+  SENT_TASKS: "/sent-tasks",
   STATISTICS: "/statistics",
   HOME: "/",
-};
+} as const;
 
 export const NAV_ITEMS: NavItem[] = [
   {
@@ -24,7 +24,7 @@ export const NAV_ITEMS: NavItem[] = [
   },
   {
     text: "Посылки",
-    path: "/parcels",
+    path: "/sent-tasks",
   },
 
   {
@@ -35,4 +35,17 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const LANGUAGES = ["C++", "Python", "Java"];
 
-export const STATUSES = ["Принято", "Ожидает", "Ошибка", "Выполнено"];
+export const TASK_STATUSES = {
+  accepted: "Принято",
+  retry: "Перерешать",
+  notFullfilled: "Не выполнено",
+} as const;
+
+export const TASK_TYPES = {
+  task: "Задача",
+  taskHomework: "Задача / ДЗ",
+  theory: "Теория",
+  test: "Тест",
+  video: "Видео",
+  presentation: "Презентация",
+} as const;

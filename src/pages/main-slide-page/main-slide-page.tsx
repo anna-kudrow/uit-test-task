@@ -1,11 +1,11 @@
-import MainSlideSidebar from "@/widgets/main-slide-sidebar/main-slide-sidebar";
 import { Send, Upload } from "lucide-react";
 import { useState } from "react";
+import MainSlideSidebar from "@/widgets/main-slide-sidebar/main-slide-sidebar";
 
 function MainSlidePage() {
   const [language, setLanguage] = useState("cpp");
   return (
-    <div className="flex">
+    <div className="flex h-full w-full">
       <MainSlideSidebar />
       <div className="flex flex-1">
         {/* Task description */}
