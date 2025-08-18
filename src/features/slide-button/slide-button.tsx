@@ -13,7 +13,7 @@ function SlideButton({ slide, state, onClick, isActive }: SlideButtonProps) {
     <button
       type="button"
       onClick={onClick}
-      className={`relative grid max-h-[68px] w-full cursor-pointer grid-cols-[17%_auto_17%] items-center overflow-hidden rounded-md p-4 before:absolute before:h-full before:w-2 before:content-[''] ${state === "collapsed" ? " " : "gap-2"} ${isActive ? "bg-gray-400" : "bg-gray-100"}
+      className={`relative grid max-h-[68px] w-full cursor-pointer grid-cols-[10%_auto_10%] items-center overflow-hidden rounded-md p-4 before:absolute before:h-full before:w-2 before:content-[''] ${state === "collapsed" ? " " : "gap-2"} ${isActive ? "bg-gray-400" : "bg-gray-100"}
       ${slide.taskStatus === TASK_STATUSES.accepted && "before:bg-green-300"}
        ${slide.taskStatus === TASK_STATUSES.notFullfilled && "before:bg-transparent"}
          ${slide.taskStatus === TASK_STATUSES.retry && "before:bg-red-300"}`}

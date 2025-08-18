@@ -1,69 +1,39 @@
-# React + TypeScript + Vite
+# 🚀 UIT Test Task | React + Vite + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📦 Обзор проекта и технологический стек
+Современное веб-приложение с использованием:
+- ⚛️ React
+- ⚡ Vite
+- 📜 TypeScript
+- 🎭 Компоненты shadcn/ui 
+- 🌈 Стилизация Tailwind CSS
+- 🔄 Клиентская маршрутизация React Router
+- ✨ Иконки Lucide 
+- 🧹 Линтинг Biome  
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️ Быстрый старт
 
-## Expanding the ESLint configuration
+npm install
+npm run dev
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Команды при разработке
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Development**
+npm run dev
+Запускает сервер разработки http://localhost:5173
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+**Build**
+npm run build
+Создает оптимизированную производственную сборку
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**Preview**
+npm run preview
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Локальный предварительный просмотр производственной сборки
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**Linting and Formatting**
+npm run format
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+P.S. Реализованы навигационное меню и меню слайд, данные для слайд меню поместила в моковые данные. Иконки для удобства взяла из библиотеки lucide, они немного отличаются. Много что не реализовано, следующим шагом был бы динамический контент выбранного слайда. Для контента сделала бы скелетон, чтобы он отображался в случае ожидания. 
+!!Остальной код сгенерирован нейросетью и требует обработки.

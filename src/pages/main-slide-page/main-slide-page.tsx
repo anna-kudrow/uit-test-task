@@ -40,7 +40,6 @@ function MainSlidePage() {
               </pre>
             </div>
           </section>
-
           {/* Submit form */}
           <section className="space-y-4 rounded-xl bg-white p-6 shadow">
             <h2 className="font-medium text-lg">Отослать</h2>

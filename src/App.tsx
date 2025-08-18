@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Navigate, Route, Routes } from "react-router";
 import { SidebarProvider } from "./components/ui/sidebar";
 import { PATHS } from "./lib/consts";
 import MainSlidePage from "./pages/main-slide-page/main-slide-page";
@@ -9,6 +9,7 @@ function App() {
     <div className="min-h-screen space-y-6 bg-gray-100 text-gray-800">
       <Header />
       <Routes>
+        <Route index element={<Navigate to={PATHS.MAIN_SLIDE} replace />} />
         <Route
           path={PATHS.MAIN_SLIDE}
           element={
